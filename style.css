@@ -8,16 +8,31 @@ font-family: 'Shrikhand', cursive; */
 ::before,
 ::after { 
     box-sizing: border-box;
-    border: 1px solid;
+   
 }
 body { 
     margin: 0px;
+    font-family: "Roboto", sans-serif;
 }
 
 header { 
     font-family: 'Shrikhand', cursive;
     text-align: center;
     box-shadow: 0px 5px 1px gray;
-    padding: 1rem 0.5rem;
+    padding: 0.3rem;
+    position: relative;
+}
 
+main .city { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 1rem;
+}
+
+main .city i { 
+    font-size: 1.5rem;
 }
