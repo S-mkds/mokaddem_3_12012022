@@ -15,6 +15,8 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+/* HEADER SECTION */
+
 header { 
     font-family: 'Shrikhand', cursive;
     text-align: center;
@@ -34,5 +36,40 @@ main .city {
 }
 
 main .city i { 
+    font-size: 1.2rem;
+}
+
+/* EXPLORER SECTION */
+
+.explorer { 
+    text-align: center;
+}
+
+.explorer h2 { 
+    margin-top: 2rem;
     font-size: 1.5rem;
+}
+
+.explorer p { 
+    font-size: 0.9rems;
+}
+
+.explorer button { 
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 2px 1px 16px -3px black;
+    background-image: linear-gradient(to top, rgba(147, 86, 220,  0.9), 
+    rgba(255,121, 218, 0.9));
+    transform: 200ms;
+    margin-top: 0.9rem;
+}
+
+.explorer button:hover { 
+    transform: scale(1.02);
+    opacity: 0.9;
+    cursor: pointer;
 }
