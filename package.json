@@ -1,0 +1,22 @@
+{
+  "name": "code-main-p3",
+  "version": "1.0.0",
+  "description": "P3 OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-mkds/ohmyfood_p3.git"
+  },
+  "author": "Mokaddem_Samir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S-mkds/ohmyfood_p3/issues"
+  },
+  "homepage": "https://github.com/S-mkds/ohmyfood_p3#readme",
+  "devDependencies": {
+    "sass": "^1.48.0"
+  }
+}
