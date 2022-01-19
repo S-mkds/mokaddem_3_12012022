@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-/* font-family: 'Roboto', sans-serif;
-font-family: 'Shrikhand', cursive; */
 *,
 ::before,
 ::after {
@@ -13,16 +11,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* HEADER SECTION */
-header {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  box-shadow: 0px 5px 1px gray;
-  padding: 0.3rem;
-  position: relative;
+main {
+  padding: 0 1rem;
 }
 
-main .city {
+.city {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,29 +24,45 @@ main .city {
   text-align: center;
   padding: 1rem;
 }
-
-main .city i {
+.city i {
   font-size: 1.2rem;
 }
 
-/* EXPLORER SECTION */
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 5px 1px gray;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 1rem;
+}
+.city i {
+  font-size: 1.2rem;
+}
+
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   margin-top: 2rem;
   font-size: 1.5rem;
 }
-
 .explorer p {
   font-size: 0.9rems;
 }
-
 .explorer button {
   color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -62,11 +71,28 @@ main .city i {
   transform: 200ms;
   margin-top: 0.9rem;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
+}
+
+.tuto ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+@media (max-width: 800px) {
+  .tuto ol {
+    flex-direction: columns;
+  }
+}
+.tuto li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

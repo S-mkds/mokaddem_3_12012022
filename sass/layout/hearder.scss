@@ -1,0 +1,20 @@
+header { 
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    box-shadow: 0px 5px 1px gray;
+    padding: 0.3rem;
+    position: relative;
+}
+
+.city { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 1rem;
+    & i { 
+        font-size: 1.2rem;
+    }
+}
