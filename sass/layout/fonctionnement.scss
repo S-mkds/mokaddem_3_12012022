@@ -1,3 +1,6 @@
+@use "../utils/box-shadow.scss";
+@use "../utils/zoom.scss";
+
 .tuto { 
     & ol { 
         display: flex;
@@ -13,5 +16,10 @@
     padding: 1rem 2rem;
     border: 1px solid red;
     flex-grow: 1;
+    border-radius: 1rem;
+    @include box-shadow.base-shadow;
+    &:hover { 
+        @include zoom.zoom;
+    }
 }
 }

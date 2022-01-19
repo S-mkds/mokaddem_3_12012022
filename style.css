@@ -66,10 +66,10 @@ header {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 16px -3px black;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transform: 200ms;
   margin-top: 0.9rem;
+  box-shadow: 2px 1px 16px -3px black;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -93,6 +93,11 @@ header {
   padding: 1rem 2rem;
   border: 1px solid red;
   flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 16px -3px black;
+}
+.tuto li:hover {
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=style.css.map */
