@@ -80,24 +80,41 @@ header {
 .tuto ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   border-radius: 1rem;
+  list-style: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .tuto ol {
     flex-direction: columns;
+    list-style: none;
   }
 }
 .tuto li {
   background-color: #f6f6f6;
   padding: 1rem 2rem;
-  border: 1px solid red;
   flex-grow: 1;
   border-radius: 1rem;
   box-shadow: 2px 1px 16px -3px black;
 }
 .tuto li:hover {
   transform: scale(1.02);
+}
+.tuto li i.fas {
+  margin-right: 1rem;
+  color: lightgrey;
+  font-size: 1.5rem;
+}
+.tuto li span {
+  color: white;
+  background-color: #9356dc;
+  position: relative;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: small;
+  left: -42px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
