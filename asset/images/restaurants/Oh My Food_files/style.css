@@ -14,16 +14,6 @@ body {
 main {
   padding: 0 7rem;
 }
-@media (max-width: 1000px) {
-  main {
-    padding: 0 1rem;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 header {
   font-family: "Shrikhand", cursive;
@@ -119,99 +109,29 @@ header {
 
 .menus {
   background-color: #f6f6f6;
-  border-radius: 0.3rem;
-  margin-bottom: 2rem;
 }
 .menus h2 {
-  margin: 3rem 1rem;
+  margin: 4rem 1rem;
   padding-top: 1rem;
 }
 .menus .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
-  padding: 1rem;
+  gap: 2rem;
 }
 @media (max-width: 762px) {
   .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menus .menus__cards .new {
-  position: relative;
-  background-color: white;
-  border-radius: 1rem;
+.menus .card {
+  border: 1px solid gray;
 }
-.menus .menus__cards .new::before {
-  content: "Nouveau";
-  position: absolute;
-  height: 2rem;
-  width: 5rem;
-  background-color: #99e2d0;
-  display: grid;
-  place-items: center;
-  right: 1rem;
-  top: 1rem;
-  border-radius: 0.3rem;
-}
-.menus .card__image {
+.menus .card .card__image {
+  background-image: url("../asset./images./restaurants./image1.jpg");
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
-}
-.menus .card__image-1 {
-  background-image: url("/asset/images/restaurants/image1.jpg");
-}
-.menus .card__image-2 {
-  background-image: url("/asset/images/restaurants/image2.jpg");
-}
-.menus .card__image-3 {
-  background-image: url("/asset/images/restaurants/image3.jpg");
-}
-.menus .card__image-4 {
-  background-image: url("/asset/images/restaurants/image4.jpg");
-}
-.menus .card h3, .menus .card p {
-  padding-left: 1rem;
-}
-.menus .card .fas {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 200ms;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
-}
-.menus .card:hover .fas {
-  opacity: 1;
-  transform: scale(1.2);
-}
-.menus card__description {
-  position: relative;
-}
-.menus i {
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 85%;
-}
-
-footer {
-  padding: 1rem 3rem;
-  margin: 0;
-  background-color: #353535;
-}
-footer h2 {
-  font-family: "shrikhand", "sans-serif";
-  color: white;
-  font-size: 2rem;
-  font-weight: 400;
-}
-footer p {
-  margin-top: 0.5;
-  color: white;
-  font-size: 1rem;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,9 @@
 @use "../utils/box-shadow.scss";
 @use "../utils/zoom.scss";
+@use "../utils/colors.scss";
 
 .tuto { 
+    margin-bottom: 2rem;
     & ol { 
         display: flex;
         flex-wrap: wrap;
@@ -29,7 +31,7 @@
     }
     & span { 
         color: white;
-        background-color: #9356dc;
+        background-color: colors.$secondary;
         position: relative;
         padding: 10px;
         width: 50px;

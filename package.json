@@ -4,7 +4,7 @@
   "description": "P3 OhMyFood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch  style.scss style.css"
+    "sass": "sass --watch  main.scss style.css"
   },
   "repository": {
     "type": "git",
