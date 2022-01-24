@@ -1,5 +1,4 @@
-@use "../utils/box-shadow.scss";
-@use "../utils/linear-gradient.scss";
+@use "../utils/mixin.scss";
 
 .explorer { 
     text-align: center;
@@ -18,10 +17,10 @@
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
-    @include linear-gradient.gradient(0.9);
+    @include mixin.gradient(0.9);
     transform: 200ms;
     margin-top: 0.9rem;
-    @include box-shadow.base-shadow;
+    @include mixin.base-shadow;
 }   
     & button:hover { 
     transform: scale(1.02);

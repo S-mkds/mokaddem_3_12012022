@@ -1,0 +1,110 @@
+@use "../../sass/utils/mixin.scss";
+@use "../utils/colors.scss";
+
+
+
+// SECTION IMG, ICON //
+
+.img-page img { 
+    display: block;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: bottom;
+  
+}
+.icon-div { 
+
+     h2 { 
+    font-family: "Shrikhand", "cursive";
+    position: relative;
+    padding: 2rem 1rem;
+ 
+
+}
+.icon-page { 
+    margin-top: -6rem;
+    background-color: colors.$lightgrey;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    & i { 
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 20%;
+        
+    }
+    display: flex;
+    justify-content: space-between;
+    .fas { 
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms;
+        @include mixin.gradient(1);
+    }
+    &:hover .fas  { 
+        opacity: 1; 
+        transform: scale(1.2);
+    }
+}
+}
+
+// SECTION MENU // 
+
+.menu-page { 
+    padding: 1rem;
+    background-color: colors.$lightgrey;
+    // retirer apres // 
+    margin: 1rem;
+    .menu-annim { 
+        background-color: colors.$tertiary;
+        padding-right: 3rem;
+        margin-right: -4rem;
+        width: 4rem;
+
+    &:hover{ 
+        animation: slide-left 0.5s ease-in-out 0.5s both;
+        @keyframes slide-left {
+        0% {
+        transform: translateX(0);
+    }
+        100% {
+        transform: translateX(-100px);
+    }
+    }
+    }
+    }
+}
+.grid-page { 
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    @media (max-width:1000px){ 
+        flex-direction: column;
+    }
+}
+.menu-page-list { 
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.menu-item { 
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    h4, h3, p { 
+        padding-left: 1rem;
+         margin: 0;
+    }
+
+}
+.price-page { 
+    font-weight: 900;
+    margin-left: auto !important;
+    display: flex;
+    align-self: self-end;
+    padding-right: 2rem;
+}

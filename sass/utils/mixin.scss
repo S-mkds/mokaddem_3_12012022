@@ -3,3 +3,11 @@
     rgba(147, 86, 220,  ($opacity)), 
     rgba(255,121, 218, ($opacity)));
 }
+
+@mixin base-shadow {
+    box-shadow: 2px 1px 16px -3px black;
+}
+
+@mixin zoom{ 
+    transform: scale(1.02);
+}

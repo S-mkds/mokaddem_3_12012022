@@ -1,5 +1,5 @@
 @use "../utils/colors.scss";
-@use "../utils/linear-gradient.scss";
+@use "../utils/mixin.scss";
 
 .menus  { 
     background-color: #f6f6f6;
@@ -41,6 +41,11 @@ h2 {
         height: 15rem;
         background-size: cover;
         border-radius: 1rem 1rem 0 0;
+        background: no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     &__image-1 { 
         background-image: url('/asset/images/restaurants/image1.jpg');
@@ -63,7 +68,7 @@ h2 {
         -webkit-background-clip: text;
         opacity: 0;
         transition: all 200ms;
-        @include linear-gradient.gradient(1);
+        @include mixin.gradient(1);
     }
     &:hover .fas { 
         opacity: 1; 
