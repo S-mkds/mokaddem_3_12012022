@@ -1,10 +1,12 @@
 @use "../utils/mixin.scss";
+@use "../utils/colors.scss";
 
 .explorer { 
+    background-color: colors.$lightgrey;
     text-align: center;
     & h2 { 
-
-    margin-top: 2rem;
+    margin-top: 0;
+    padding: 2rem;
     font-size: 1.5rem;
 }
     & p { 
@@ -20,6 +22,7 @@
     @include mixin.gradient(0.9);
     transform: 200ms;
     margin-top: 0.9rem;
+    margin-bottom: 2rem;
     @include mixin.base-shadow;
 }   
     & button:hover { 

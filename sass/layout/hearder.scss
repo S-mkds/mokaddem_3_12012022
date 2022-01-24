@@ -11,14 +11,17 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #f3f3f3;
+    background-color: lightgrey;
     text-align: center;
     padding: 0.8rem;
     & i { 
         font-size: 1.2rem;
-    & input { 
-        border:none;
-        background-color: #f3f3f3;
+        padding-left: 3rem;
     }
-    }
+}
+.city input { 
+    background-color: lightgrey !important;
+    border:none;
+    font-size: 1rem;
+ 
 }

@@ -38,23 +38,28 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: #f3f3f3;
+  background-color: lightgrey;
   text-align: center;
   padding: 0.8rem;
 }
 .city i {
   font-size: 1.2rem;
+  padding-left: 3rem;
 }
-.city i input {
+
+.city input {
+  background-color: lightgrey !important;
   border: none;
-  background-color: #f3f3f3;
+  font-size: 1rem;
 }
 
 .explorer {
+  background-color: #F6F6F6;
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 2rem;
+  margin-top: 0;
+  padding: 2rem;
   font-size: 1.5rem;
 }
 .explorer p {
@@ -70,6 +75,7 @@ header {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transform: 200ms;
   margin-top: 0.9rem;
+  margin-bottom: 2rem;
   box-shadow: 2px 1px 16px -3px black;
 }
 .explorer button:hover {
@@ -135,6 +141,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   padding: 1rem;
+  position: relative;
 }
 @media (max-width: 762px) {
   .menus .menus__cards {
@@ -189,20 +196,27 @@ header {
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms;
+}
+.menus .card .fas:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 .menus .card:hover .fas {
   opacity: 1;
   transform: scale(1.2);
 }
-.menus card__description {
+.menus .card__description {
   position: relative;
 }
 .menus i {
   font-size: 2rem;
   position: absolute;
   right: 1rem;
-  top: 85%;
+  top: 20%;
 }
 
 footer {
@@ -237,7 +251,7 @@ footer p {
   padding: 2rem 1rem;
 }
 .icon-div .icon-page {
-  margin-top: -6rem;
+  margin-top: -8rem;
   background-color: #F6F6F6;
   border-radius: 2rem 2rem 0 0;
   position: relative;

@@ -5,13 +5,11 @@
 ::before,
 ::after { 
     box-sizing: border-box;
-   
 }
 body { 
     margin: 0px;
     font-family: "Roboto", sans-serif;
 }
-
 main { 
     padding: 0 7rem;
 @media (max-width: 1000px) {
@@ -19,7 +17,6 @@ main {
     
 }
 }
-
 a { 
     text-decoration: none;
     color: inherit;
