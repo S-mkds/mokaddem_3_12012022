@@ -1,7 +1,13 @@
 @use "../../sass/utils/mixin.scss";
 @use "../utils/colors.scss";
+@use "../utils/variables.scss";
+@use "../utils/annimation.scss";
 
-
+.arrow { 
+    left: 2rem;
+    position: absolute;
+    top: 20%;
+}
 
 // SECTION IMG, ICON //
 
@@ -44,67 +50,114 @@
         transition: all 200ms;
         @include mixin.gradient(1);
     }
-    &:hover .fas  { 
+    & .fas:hover  { 
         opacity: 1; 
         transform: scale(1.2);
+        cursor: pointer;
     }
 }
 }
 
 // SECTION MENU // 
 
-.menu-page { 
+.food-page { 
     padding: 1rem;
     background-color: colors.$lightgrey;
-    // retirer apres // 
-    margin: 1rem;
-    .menu-annim { 
-        background-color: colors.$tertiary;
-        padding-right: 3rem;
-        margin-right: -4rem;
-        width: 4rem;
-
-    &:hover{ 
-        animation: slide-left 0.5s ease-in-out 0.5s both;
-        @keyframes slide-left {
-        0% {
-        transform: translateX(0);
-    }
-        100% {
-        transform: translateX(-100px);
-    }
-    }
-    }
-    }
-}
-.grid-page { 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    @media (max-width:1000px){ 
-        flex-direction: column;
-    }
 }
-.menu-page-list { 
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1rem;
+.main-food-page { 
+    background-color: colors.$lightgrey;
 }
-.menu-item { 
+.food-menu { 
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: gray;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: "…";
+    cursor: pointer;
+    
     h4, h3, p { 
         padding-left: 1rem;
          margin: 0;
+         padding-bottom: 2px;
+         padding-top: 2px;
     }
 
-}
-.price-page { 
+
+.food-menu__price { 
     font-weight: 900;
     margin-left: auto !important;
-    display: flex;
     align-self: self-end;
-    padding-right: 2rem;
+    padding-right: 1rem;
+    height: 2rem;
+}
+.food-menu__slide { 
+    background-color: colors.$tertiary;
+    margin-right: -2.5rem;
+    padding-right: 1.5rem;
+    height: 60px;
+    cursor: pointer;
+    
+}
+&:hover .food-menu__slide{ 
+    animation: slide-left 0.5s ease-in-out 0.5s both;
+    @keyframes slide-left {
+    0% {
+    transform: translateX(0);
+}
+    100% {
+    transform: translateX(-30px);
+}
+}
+}
+}
+
+
+// &:hover{ 
+//     animation: slide-left 0.5s ease-in-out 0.5s both;
+//     @keyframes slide-left {
+//     0% {
+//     transform: translateX(0);
+// }
+//     100% {
+//     transform: translateX(-30px);
+//     margin-right: -1rem;
+// }
+// }
+// }
+
+// COMMANDER BUTTON 
+
+.button-command { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.button-command button  { 
+
+    @include mixin.gradient(1);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 10px 5px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 4px 4px 6px #aaa;
+    cursor: pointer;
+    margin: 30px 0;
+    padding: 20px;
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 768px) { 
+        width: 50%;
+    }
 }
