@@ -1,7 +1,7 @@
 @use "../utils/mixin.scss";
 @use "../utils/colors.scss";
 
-.explorer { 
+.button-city { 
     background-color: colors.$lightgrey;
     text-align: center;
     & h2 { 
@@ -14,7 +14,7 @@
 }
     & button { 
     color: white;
-    font-weight: bold;
+    font-weight: 300;
     font-size: 1rem;
     padding: 1rem 2rem;
     border: none;
@@ -23,7 +23,7 @@
     transform: 200ms;
     margin-top: 0.9rem;
     margin-bottom: 2rem;
-    @include mixin.base-shadow;
+    @include mixin.base-shadow2;
 }   
     & button:hover { 
     transform: scale(1.02);

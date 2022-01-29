@@ -1,8 +1,9 @@
 @use "../utils/mixin.scss";
 @use "../utils/colors.scss";
 
-.tuto { 
+.function-filter { 
     margin-bottom: 2rem;
+    cursor: pointer;
     & ol { 
         display: flex;
         flex-wrap: wrap;
@@ -19,7 +20,7 @@
         padding: 1rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        @include mixin.base-shadow;
+        @include mixin.base-shadow2;
     &:hover { 
         @include mixin.zoom;
     }
@@ -30,14 +31,20 @@
     }
     & span { 
         color: white;
-        background-color: colors.$secondary;
+        background-color: #9356dc;
         position: relative;
-        padding: 10px;
-        width: 50px;
-        height: 50px;
+        padding: 8px;
         font-size: small;
-        left: -42px;
-        border-radius: 50%;
+        left: -40px;
+        width: 25px;
+        height: 25px;
+        -moz-border-radius: 60px;
+        -moz-background-clip: padding;
+        border-radius: 60px;
+        background-clip: padding-box;
+        float: left;
+        display: flex;
+        align-items: center;
     }
 }
 }

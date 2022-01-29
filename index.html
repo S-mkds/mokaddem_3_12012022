@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <title>Oh My Food</title>
              <script src="https://kit.fontawesome.com/c22d49a89e.js" crossorigin="anonymous"></script>
+             <link rel="stylesheet" href="./css/normalize.css">
              <link rel="stylesheet" href="style.css">
-</head>
+             <link rel="apple-touch-icon" sizes="180x180" href="/asset/images/favicon/apple-touch-icon.png">
+             <link rel="icon" type="image/png" sizes="32x32" href="./asset/images/favicon/favicon-16x16.png">
+             <link rel="icon" type="image/png" sizes="16x16" href="./asset/images/favicon/favicon-16x16.png">
+             <link rel="manifest" href="./asset/images/favicon/site.webmanifest">
+    </head>
+
 <body>
+    <!-- Loader SPINNER -->
+    <div class="lds-dual-ring"></div>
+    
     <header>
         <h1>ohmyfood</h1>
     </header>
@@ -19,7 +28,7 @@
                 <input type="search" name="city" value="Paris,Belleville" placeholder="Votre ville">
             </div>
 
-            <section class="explorer">
+            <section class="button-city">
                 <h2>Réservez le menu qui <br>vous convient</h2>
                 <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
                 <button>Explorer nos restaurants</button>
@@ -27,7 +36,7 @@
 
                   <!--FONCTIONNEMENT SECTION  -->
         <main>
-            <section class="tuto">
+            <section class="function-filter">
                 <h2>Fonctionnement</h2>
                 <ol>
                     <li><span>1</span><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
@@ -36,11 +45,11 @@
                 </ol>
             </section>
         </main>
-            <!-- Restaurant menu section -->
+            <!-- Restaurant card section -->
 
-            <section class="menus">
+            <section class="chart">
                 <h2>Restaurents</h2>
-                <div class="menus__cards">
+                <div class="chart__cards">
                     <a href="./pages/page-1.html" class="card new">
                         <div class="card__image card__image-1"></div>
                         <div class="card__description">

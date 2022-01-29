@@ -1,13 +1,17 @@
 @use "../../sass/utils/mixin.scss";
 @use "../utils/colors.scss";
 @use "../utils/variables.scss";
-@use "../utils/annimation.scss";
+@use "../utils/animations.scss";
 
 .arrow { 
     left: 2rem;
     position: absolute;
     top: 20%;
+    &:hover { 
+        transform: scale(1.5);
+    }
 }
+
 
 // SECTION IMG, ICON //
 
@@ -64,74 +68,98 @@
     padding: 1rem;
     background-color: colors.$lightgrey;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @media (max-width: 1200px){ 
+    display: block;
+    }
+    h3 {
+      border-bottom: 5px solid colors.$tertiary;
+      width: 2rem;
+      opacity: 0.8;
+}
 }
 .main-food-page { 
     background-color: colors.$lightgrey;
 }
 .food-menu { 
     display: flex;
-    align-items: center;
     overflow: hidden;
     background-color: white;
     margin: 1rem;
     border-radius: 1rem;
-    box-shadow: gray;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-overflow: "…";
+    @include mixin.base-shadow2;
     cursor: pointer;
-    
-    h4, h3, p { 
+    padding-right: 3rem;
+    animation: appear 1s;
+    animation-fill-mode: both;
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) { 
+        animation-delay: 100ms * $i;
+        }
+    }
+    h4, p { 
         padding-left: 1rem;
          margin: 0;
-         padding-bottom: 2px;
-         padding-top: 2px;
+         padding-top: 5px;
+         text-overflow: ellipsis;
+         overflow: hidden;
     }
-
-
+.food-menu__description { 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .food-menu__price { 
     font-weight: 900;
     margin-left: auto !important;
     align-self: self-end;
     padding-right: 1rem;
+    padding-left: 1rem;
     height: 2rem;
 }
 .food-menu__slide { 
     background-color: colors.$tertiary;
-    margin-right: -2.5rem;
-    padding-right: 1.5rem;
+    padding-left: 6px;
+    padding-right: 2px;
+    margin-right: -6rem;
     height: 60px;
     cursor: pointer;
-    
+    display: grid;
+    align-items: center;
+    flex-shrink: 0;
 }
 &:hover .food-menu__slide{ 
-    animation: slide-left 0.5s ease-in-out 0.5s both;
+    animation: slide-left 0.3s ease-in-out 0.1s both;
     @keyframes slide-left {
     0% {
     transform: translateX(0);
 }
     100% {
-    transform: translateX(-30px);
+    transform: translateX(-48px);
 }
 }
-}
-}
+    i { 
+        @include animations.reverse-check;
+        animation: reverse-check 0.5s ease-in-out { 
 
-
-// &:hover{ 
-//     animation: slide-left 0.5s ease-in-out 0.5s both;
-//     @keyframes slide-left {
-//     0% {
-//     transform: translateX(0);
-// }
-//     100% {
-//     transform: translateX(-30px);
-//     margin-right: -1rem;
-// }
-// }
-// }
+        }
+    }
+}
+&:hover .food-menu__price { 
+    animation: slide-left 0.3s ease-in-out 0.1s both;
+    @keyframes slide-left {
+    0% {
+    transform: translateX(0);
+}
+    100% {
+    transform: translateX(-48px);
+}
+}
+}
+& .fa-check-circle {
+    color: #fff;
+  }
+}
 
 // COMMANDER BUTTON 
 
@@ -149,7 +177,7 @@
     padding: 10px 5px;
     color: #fff;
     font-weight: bold;
-    box-shadow: 4px 4px 6px #aaa;
+    @include mixin.base-shadow2;
     cursor: pointer;
     margin: 30px 0;
     padding: 20px;
@@ -161,3 +189,5 @@
         width: 50%;
     }
 }
+
+

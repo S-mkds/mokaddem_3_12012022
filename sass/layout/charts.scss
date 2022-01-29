@@ -1,7 +1,7 @@
 @use "../utils/colors.scss";
 @use "../utils/mixin.scss";
 
-.menus  { 
+.chart  { 
     background-color: #f6f6f6;
     border-radius: 0.3rem;
     margin-bottom: 2rem;
@@ -13,7 +13,7 @@ h2 {
     margin: 3rem 1rem;
     padding-top: 1rem;
 }
-.menus__cards { 
+.chart__cards { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
@@ -25,8 +25,6 @@ h2 {
 
 .new { 
     position:relative;
-    background-color: white;
-    border-radius: 1rem;
 }
 .new::before {
     content: "Nouveau";
@@ -43,7 +41,8 @@ h2 {
 
 }
 .card { 
-    
+    background-color: white;
+    border-radius: 1rem;
     &__image { 
         height: 15rem;
         background-size: cover;

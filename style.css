@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 *,
@@ -26,10 +25,48 @@ a {
   color: inherit;
 }
 
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.lds-dual-ring {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+  inset: 0;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  position: absolute;
+  width: 80px;
+  height: 84px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fcf;
+  border-color: #fcf transparent #fcf transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0px 5px 1px gray;
+  box-shadow: 4px 4px 6px #aaa;
   padding: 0.3rem;
   position: relative;
 }
@@ -54,21 +91,21 @@ header {
   font-size: 1rem;
 }
 
-.explorer {
+.button-city {
   background-color: #F6F6F6;
   text-align: center;
 }
-.explorer h2 {
+.button-city h2 {
   margin-top: 0;
   padding: 2rem;
   font-size: 1.5rem;
 }
-.explorer p {
+.button-city p {
   font-size: 0.9rems;
 }
-.explorer button {
+.button-city button {
   color: white;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
@@ -77,18 +114,19 @@ header {
   transform: 200ms;
   margin-top: 0.9rem;
   margin-bottom: 2rem;
-  box-shadow: 2px 1px 16px -3px black;
+  box-shadow: 4px 4px 6px #aaa;
 }
-.explorer button:hover {
+.button-city button:hover {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
 }
 
-.tuto {
+.function-filter {
   margin-bottom: 2rem;
+  cursor: pointer;
 }
-.tuto ol {
+.function-filter ol {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -96,54 +134,60 @@ header {
   list-style: none;
 }
 @media (max-width: 1200px) {
-  .tuto ol {
+  .function-filter ol {
     flex-direction: columns;
     list-style: none;
   }
 }
-.tuto li {
+.function-filter li {
   background-color: #f6f6f6;
   padding: 1rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 2px 1px 16px -3px black;
+  box-shadow: 4px 4px 6px #aaa;
 }
-.tuto li:hover {
+.function-filter li:hover {
   transform: scale(1.02);
 }
-.tuto li i.fas {
+.function-filter li i.fas {
   margin-right: 1rem;
   color: lightgrey;
   font-size: 1.5rem;
 }
-.tuto li span {
+.function-filter li span {
   color: white;
   background-color: #9356dc;
   position: relative;
-  padding: 10px;
-  width: 50px;
-  height: 50px;
+  padding: 8px;
   font-size: small;
-  left: -42px;
-  border-radius: 50%;
+  left: -40px;
+  width: 25px;
+  height: 25px;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 60px;
+  background-clip: padding-box;
+  float: left;
+  display: flex;
+  align-items: center;
 }
 
-.menus {
+.chart {
   background-color: #f6f6f6;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
 }
 @media (max-width: 761px) {
-  .menus {
+  .chart {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 }
-.menus h2 {
+.chart h2 {
   margin: 3rem 1rem;
   padding-top: 1rem;
 }
-.menus .menus__cards {
+.chart .chart__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
@@ -151,16 +195,14 @@ header {
   position: relative;
 }
 @media (max-width: 762px) {
-  .menus .menus__cards {
+  .chart .chart__cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menus .menus__cards .new {
+.chart .chart__cards .new {
   position: relative;
-  background-color: white;
-  border-radius: 1rem;
 }
-.menus .menus__cards .new::before {
+.chart .chart__cards .new::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -172,7 +214,11 @@ header {
   top: 1rem;
   border-radius: 0.3rem;
 }
-.menus .card__image {
+.chart .card {
+  background-color: white;
+  border-radius: 1rem;
+}
+.chart .card__image {
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
@@ -182,29 +228,29 @@ header {
   -o-background-size: cover;
   background-size: cover;
 }
-.menus .card__image-1 {
+.chart .card__image-1 {
   background-image: url("/asset/images/restaurants/image1.jpg");
 }
-.menus .card__image-2 {
+.chart .card__image-2 {
   background-image: url("/asset/images/restaurants/image2.jpg");
 }
-.menus .card__image-3 {
+.chart .card__image-3 {
   background-image: url("/asset/images/restaurants/image3.jpg");
 }
-.menus .card__image-4 {
+.chart .card__image-4 {
   background-image: url("/asset/images/restaurants/image4.jpg");
 }
-.menus .card h3, .menus .card p {
+.chart .card h3, .chart .card p {
   padding-left: 1rem;
 }
-.menus .card .fas {
+.chart .card .fas {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms;
 }
-.menus .card .fas:hover {
+.chart .card .fas:hover {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -212,14 +258,14 @@ header {
   transition: all 200ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-.menus .card:hover .fas {
+.chart .card:hover .fas {
   opacity: 1;
   transform: scale(1.2);
 }
-.menus .card__description {
+.chart .card__description {
   position: relative;
 }
-.menus i {
+.chart i {
   font-size: 2rem;
   position: absolute;
   right: 1rem;
@@ -229,6 +275,7 @@ header {
 footer {
   padding: 1rem 3rem;
   margin: 0;
+  height: auto;
   background-color: #353535;
 }
 footer h2 {
@@ -242,22 +289,16 @@ footer p {
   color: white;
   font-size: 1rem;
   align-items: center;
+  cursor: pointer;
 }
 
-@keyframes appear {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .arrow {
   left: 2rem;
   position: absolute;
   top: 20%;
+}
+.arrow:hover {
+  transform: scale(1.5);
 }
 
 .img-page img {
@@ -305,8 +346,17 @@ footer p {
   padding: 1rem;
   background-color: #F6F6F6;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+@media (max-width: 1200px) {
+  .food-page {
+    display: block;
+  }
+}
+.food-page h3 {
+  border-bottom: 5px solid #99e2d0;
+  width: 2rem;
+  opacity: 0.8;
 }
 
 .main-food-page {
@@ -315,47 +365,91 @@ footer p {
 
 .food-menu {
   display: flex;
-  align-items: center;
   overflow: hidden;
   background-color: white;
   margin: 1rem;
   border-radius: 1rem;
-  box-shadow: gray;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  text-overflow: "…";
+  box-shadow: 4px 4px 6px #aaa;
   cursor: pointer;
+  padding-right: 3rem;
+  animation: appear 1s;
+  animation-fill-mode: both;
 }
-.food-menu h4, .food-menu h3, .food-menu p {
+.food-menu:nth-child(1) {
+  animation-delay: 100ms;
+}
+.food-menu:nth-child(2) {
+  animation-delay: 200ms;
+}
+.food-menu:nth-child(3) {
+  animation-delay: 300ms;
+}
+.food-menu h4, .food-menu p {
   padding-left: 1rem;
   margin: 0;
-  padding-bottom: 2px;
-  padding-top: 2px;
+  padding-top: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.food-menu .food-menu__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .food-menu .food-menu__price {
   font-weight: 900;
   margin-left: auto !important;
   align-self: self-end;
   padding-right: 1rem;
+  padding-left: 1rem;
   height: 2rem;
 }
 .food-menu .food-menu__slide {
   background-color: #99e2d0;
-  margin-right: -2.5rem;
-  padding-right: 1.5rem;
+  padding-left: 6px;
+  padding-right: 2px;
+  margin-right: -6rem;
   height: 60px;
   cursor: pointer;
+  display: grid;
+  align-items: center;
+  flex-shrink: 0;
 }
 .food-menu:hover .food-menu__slide {
-  animation: slide-left 0.5s ease-in-out 0.5s both;
+  animation: slide-left 0.3s ease-in-out 0.1s both;
 }
 @keyframes slide-left {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-30px);
+    transform: translateX(-48px);
   }
+}
+.food-menu:hover .food-menu__slide i {
+  animation: reverse-check 0.5s ease-in-out;
+}
+@keyframes reverse-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.food-menu:hover .food-menu__price {
+  animation: slide-left 0.3s ease-in-out 0.1s both;
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-48px);
+  }
+}
+.food-menu .fa-check-circle {
+  color: #fff;
 }
 
 .button-command {

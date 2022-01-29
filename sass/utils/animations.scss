@@ -1,0 +1,29 @@
+//CHECK REVERSE HOVER
+
+@mixin reverse-check {
+  @keyframes reverse-check { 
+      0% { 
+        transform: rotate(-270deg);
+      }
+      100% { 
+        transform: rotate(0deg);
+      }
+      }
+  }
+  
+// APPEAR
+
+@keyframes appear { 
+  0% { 
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// SPINNER LOAD
+
+
