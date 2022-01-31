@@ -37,11 +37,11 @@ a {
 }
 .loader-start {
   position: fixed;
-  background: linear-gradient(#ffa91f, #d725f6c0);
+  background: linear-gradient(#b81fff, #ff53ffc0);
   height: 100vh;
   inset: 0;
   z-index: 2;
-  opacity: 0.8;
+  opacity: 0.9;
   animation: disappear 100ms forwards;
   animation-delay: 2s;
   transform-origin: center;
@@ -52,7 +52,7 @@ a {
     transform: scale(1);
   }
   to {
-    transform: scale(1);
+    transform: scale(0);
   }
 }
 .lds-dual-ring {
@@ -61,6 +61,14 @@ a {
   border: 10px solid purple;
   border-color: white transparent white transparent;
   animation: lds-dual-ring 0.5s ease infinite;
+  position: absolute;
+  top: 50%;
+  right: 45%;
+}
+@media (max-width: 768px) {
+  .lds-dual-ring {
+    right: 38%;
+  }
 }
 .lds-dual-ring i {
   font-size: xx-large;
@@ -231,6 +239,9 @@ header {
   background-color: white;
   border-radius: 1rem;
 }
+.chart .card:hover {
+  transform: scale(1.02);
+}
 .chart .card__image {
   height: 15rem;
   background-size: cover;
@@ -261,19 +272,20 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms;
+  transition: all 600ms;
 }
 .chart .card .fas:hover {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms;
+  transition: all 600ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 .chart .card:hover .fas {
   opacity: 1;
   transform: scale(1.2);
+  transition-delay: 250ms;
 }
 .chart .card__description {
   position: relative;
@@ -380,12 +392,11 @@ footer p {
   display: flex;
   overflow: hidden;
   background-color: white;
-  margin: 1rem;
+  margin: 1rem 0;
   border-radius: 1rem;
   box-shadow: 4px 4px 6px #aaa;
   cursor: pointer;
-  padding-right: 3rem;
-  animation: appear 1s;
+  animation: appear 2s;
   animation-fill-mode: both;
 }
 .food-menu:nth-child(1) {
@@ -397,7 +408,8 @@ footer p {
 .food-menu:nth-child(3) {
   animation-delay: 300ms;
 }
-.food-menu h4, .food-menu p {
+.food-menu h4,
+.food-menu p {
   padding-left: 1rem;
   margin: 0;
   padding-top: 5px;
@@ -408,36 +420,30 @@ footer p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  width: calc(100% - 3rem);
+  transition: width 200ms linear;
 }
 .food-menu .food-menu__price {
   font-weight: 900;
-  margin-left: auto !important;
   align-self: self-end;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  width: 3rem;
   height: 2rem;
+  text-align: center;
 }
 .food-menu .food-menu__slide {
   background-color: #99e2d0;
-  padding-left: 6px;
-  padding-right: 2px;
-  margin-right: -6rem;
+  margin-right: -4rem;
   height: 60px;
+  width: 4rem;
   cursor: pointer;
   display: grid;
   align-items: center;
   flex-shrink: 0;
+  transition: margin-right 200ms linear;
+  text-align: center;
 }
 .food-menu:hover .food-menu__slide {
-  animation: slide-left 0.3s ease-in-out 0.1s both;
-}
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-48px);
-  }
+  margin-right: 0;
 }
 .food-menu:hover .food-menu__slide i {
   animation: reverse-check 0.5s ease-in-out;
@@ -450,16 +456,8 @@ footer p {
     transform: rotate(0deg);
   }
 }
-.food-menu:hover .food-menu__price {
-  animation: slide-left 0.3s ease-in-out 0.1s both;
-}
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-48px);
-  }
+.food-menu:hover .food-menu__description {
+  width: calc(100% - 7rem);
 }
 .food-menu .fa-check-circle {
   color: #fff;
@@ -487,6 +485,11 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.button-command button:hover {
+  transform: scale(1.04);
+  transition-delay: 250ms linear;
+  transition-property: transform;
 }
 @media (max-width: 768px) {
   .button-command button {

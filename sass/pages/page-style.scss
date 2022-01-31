@@ -3,191 +3,172 @@
 @use "../utils/variables.scss";
 @use "../utils/animations.scss";
 
-.arrow { 
-    left: 2rem;
-    position: absolute;
-    top: 20%;
-    &:hover { 
-        transform: scale(1.5);
-    }
+.arrow {
+  left: 2rem;
+  position: absolute;
+  top: 20%;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
-
 
 // SECTION IMG, ICON //
 
-.img-page img { 
-    display: block;
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    object-position: bottom;
-  
+.img-page img {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: bottom;
 }
-.icon-div { 
-
-     h2 { 
+.icon-div {
+  h2 {
     font-family: "Shrikhand", "cursive";
     position: relative;
     padding: 2rem 1rem;
- 
-
-}
-.icon-page { 
+  }
+  .icon-page {
     margin-top: -8rem;
     background-color: colors.$lightgrey;
     border-radius: 2rem 2rem 0 0;
     position: relative;
-    & i { 
-        font-size: 2rem;
-        position: absolute;
-        right: 1rem;
-        top: 20%;
-        
+    & i {
+      font-size: 2rem;
+      position: absolute;
+      right: 1rem;
+      top: 20%;
     }
     display: flex;
     justify-content: space-between;
-    .fas { 
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 200ms;
-        @include mixin.gradient(1);
+    .fas {
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 200ms;
+      @include mixin.gradient(1);
     }
-    & .fas:hover  { 
-        opacity: 1; 
-        transform: scale(1.2);
-        cursor: pointer;
+    & .fas:hover {
+      opacity: 1;
+      transform: scale(1.2);
+      cursor: pointer;
     }
-}
+  }
 }
 
-// SECTION MENU // 
+// SECTION MENU //
 
-.food-page { 
-    padding: 1rem;
-    background-color: colors.$lightgrey;
-    display: flex;
-    justify-content: space-evenly;
-    @media (max-width: 1200px){ 
+.food-page {
+  padding: 1rem;
+  background-color: colors.$lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+  @media (max-width: 1200px) {
     display: block;
-    }
-    h3 {
-      border-bottom: 5px solid colors.$tertiary;
-      width: 2rem;
-      opacity: 0.8;
+  }
+  h3 {
+    border-bottom: 5px solid colors.$tertiary;
+    width: 2rem;
+    opacity: 0.8;
+  }
 }
+.main-food-page {
+  background-color: colors.$lightgrey;
 }
-.main-food-page { 
-    background-color: colors.$lightgrey;
-}
-.food-menu { 
-    display: flex;
-    overflow: hidden;
-    background-color: white;
-    margin: 1rem;
-    border-radius: 1rem;
-    @include mixin.base-shadow2;
-    cursor: pointer;
-    padding-right: 3rem;
-    animation: appear 1s;
-    animation-fill-mode: both;
-    @for $i from 1 through 3 {
-        &:nth-child(#{$i}) { 
-        animation-delay: 100ms * $i;
-        }
+.food-menu {
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  @include mixin.base-shadow2;
+  cursor: pointer;
+  animation: appear 2s;
+  animation-fill-mode: both;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: 100ms * $i;
     }
-    h4, p { 
-        padding-left: 1rem;
-         margin: 0;
-         padding-top: 5px;
-         text-overflow: ellipsis;
-         overflow: hidden;
-    }
-.food-menu__description { 
-    white-space: nowrap; 
+  }
+  h4,
+  p {
+    padding-left: 1rem;
+    margin: 0;
+    padding-top: 5px;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-.food-menu__price { 
+  }
+  .food-menu__description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 3rem);
+    transition: width 200ms linear;
+  }
+  .food-menu__price {
     font-weight: 900;
-    margin-left: auto !important;
     align-self: self-end;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    width: 3rem;
     height: 2rem;
-}
-.food-menu__slide { 
+    text-align: center;
+  }
+  .food-menu__slide {
     background-color: colors.$tertiary;
-    padding-left: 6px;
-    padding-right: 2px;
-    margin-right: -6rem;
+    margin-right: -4rem;
     height: 60px;
+    width: 4rem;
     cursor: pointer;
     display: grid;
     align-items: center;
     flex-shrink: 0;
-}
-&:hover .food-menu__slide{ 
-    animation: slide-left 0.3s ease-in-out 0.1s both;
-    @keyframes slide-left {
-    0% {
-    transform: translateX(0);
-}
-    100% {
-    transform: translateX(-48px);
-}
-}
-    i { 
-        @include animations.reverse-check;
-        animation: reverse-check 0.5s ease-in-out { 
-
-        }
+    transition: margin-right 200ms linear;
+    text-align: center;
+  }
+  &:hover .food-menu__slide {
+    margin-right: 0;
+    i {
+      @include animations.reverse-check;
+      animation: reverse-check 0.5s ease-in-out {
+      }
     }
-}
-&:hover .food-menu__price { 
-    animation: slide-left 0.3s ease-in-out 0.1s both;
-    @keyframes slide-left {
-    0% {
-    transform: translateX(0);
-}
-    100% {
-    transform: translateX(-48px);
-}
-}
-}
-& .fa-check-circle {
+  }
+  &:hover .food-menu__description {
+    width: calc(100% - 7rem);
+  }
+  & .fa-check-circle {
     color: #fff;
   }
 }
 
-// COMMANDER BUTTON 
+// COMMANDER BUTTON
 
-.button-command { 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.button-command {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.button-command button  { 
-
-    @include mixin.gradient(1);
-    border: 1px solid transparent;
-    border-radius: 30px;
-    padding: 10px 5px;
-    color: #fff;
-    font-weight: bold;
-    @include mixin.base-shadow2;
-    cursor: pointer;
-    margin: 30px 0;
-    padding: 20px;
-    width: 35%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media (max-width: 768px) { 
-        width: 50%;
-    }
+.button-command button {
+  @include mixin.gradient(1);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px 5px;
+  color: #fff;
+  font-weight: bold;
+  @include mixin.base-shadow2;
+  cursor: pointer;
+  margin: 30px 0;
+  padding: 20px;
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &:hover {
+    transform: scale(1.04);
+    transition-delay: 250ms linear;
+    transition-property: transform;
+  }
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 }
-
-
