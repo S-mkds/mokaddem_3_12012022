@@ -17,9 +17,9 @@
 .img-page img {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
 }
 .icon-div {
   h2 {
@@ -81,6 +81,7 @@
   background-color: white;
   margin: 1rem 0;
   border-radius: 1rem;
+  margin-right: 1rem;
   @include mixin.base-shadow2;
   cursor: pointer;
   animation: appear 2s;
@@ -129,6 +130,7 @@
     i {
       @include animations.reverse-check;
       animation: reverse-check 0.5s ease-in-out {
+
       }
     }
   }
