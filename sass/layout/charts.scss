@@ -5,6 +5,9 @@
   background-color: #f6f6f6;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+ 
   @media (max-width: 761px) {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -19,6 +22,8 @@
     gap: 1em;
     padding: 1rem;
     position: relative;
+    gap: 2rem;
+    
     @media (max-width: 762px) {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -67,16 +72,16 @@
       background-size: cover;
     }
     &__image-1 {
-      background-image: url("/asset/images/restaurants/image1.jpg");
+      background-image: url("./asset/images/restaurants/image1.jpg");
     }
     &__image-2 {
-      background-image: url("/asset/images/restaurants/image2.jpg");
+      background-image: url("./asset/images/restaurants/image2.jpg");
     }
     &__image-3 {
-      background-image: url("/asset/images/restaurants/image3.jpg");
+      background-image: url("./asset/images/restaurants/image3.jpg");
     }
     &__image-4 {
-      background-image: url("/asset/images/restaurants/image4.jpg");
+      background-image: url("./asset/images/restaurants/image4.jpg");
     }
     & h3,
     p {
