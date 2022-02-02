@@ -29,9 +29,10 @@
     border-color: white transparent white transparent;
     animation: lds-dual-ring 0.5s ease infinite;
     position: absolute;
-    top: 50%;
-    right: 45%;
+    top: 35%;
+    right: 48%;
     @media (max-width: 768px){ 
+      top: 40%;
       right: 38%;
     }
     & i { 

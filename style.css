@@ -62,11 +62,12 @@ a {
   border-color: white transparent white transparent;
   animation: lds-dual-ring 0.5s ease infinite;
   position: absolute;
-  top: 50%;
-  right: 45%;
+  top: 35%;
+  right: 48%;
 }
 @media (max-width: 768px) {
   .lds-dual-ring {
+    top: 40%;
     right: 38%;
   }
 }
@@ -121,9 +122,6 @@ header {
   padding: 2rem;
   font-size: 1.5rem;
 }
-.button-city p {
-  font-size: 0.9rems;
-}
 .button-city button {
   color: white;
   font-weight: 300;
@@ -132,7 +130,6 @@ header {
   border: none;
   border-radius: 2rem;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  transform: 200ms;
   margin-top: 0.9rem;
   margin-bottom: 2rem;
   box-shadow: 4px 4px 6px #aaa;
@@ -150,22 +147,18 @@ header {
 .function-filter ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 1rem;
   list-style: none;
-  text-align: center;
-}
-@media (max-width: 1200px) {
-  .function-filter ol {
-    flex-direction: columns;
-    list-style: none;
-  }
+  justify-content: space-evenly;
 }
 .function-filter li {
   background-color: #f6f6f6;
   padding: 1rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
+  margin-right: 5rem;
+  text-align: center;
   box-shadow: 4px 4px 6px #aaa;
 }
 .function-filter li:hover {
@@ -312,7 +305,6 @@ footer h2 {
   font-weight: 400;
 }
 footer p {
-  margin-top: 0.5;
   color: white;
   font-size: 1rem;
   align-items: center;
@@ -372,7 +364,6 @@ footer p {
 .food-page {
   padding: 1rem;
   background-color: #F6F6F6;
-  display: flex;
   justify-content: space-evenly;
 }
 @media (max-width: 1200px) {
@@ -491,7 +482,6 @@ footer p {
 }
 .button-command button:hover {
   transform: scale(1.04);
-  transition-delay: 250ms linear;
   transition-property: transform;
 }
 @media (max-width: 768px) {

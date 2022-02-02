@@ -7,20 +7,19 @@
   & ol {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 1rem;
     list-style: none;
-    text-align: center;
-    @media (max-width: 1200px) {
-      flex-direction: columns;
-      list-style: none;
-    }
+    justify-content: space-evenly;
+    
   }
   & li {
     background-color: #f6f6f6;
     padding: 1rem 2rem;
     flex-grow: 1;
     border-radius: 1rem;
+    margin-right: 5rem;
+    text-align: center;
     @include mixin.base-shadow2;
     &:hover {
       @include mixin.zoom;

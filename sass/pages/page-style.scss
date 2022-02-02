@@ -61,7 +61,6 @@
 .food-page {
   padding: 1rem;
   background-color: colors.$lightgrey;
-  display: flex;
   justify-content: space-evenly;
   @media (max-width: 1200px) {
     display: block;
@@ -167,7 +166,6 @@
   justify-content: center;
   &:hover {
     transform: scale(1.04);
-    transition-delay: 250ms linear;
     transition-property: transform;
   }
   @media (max-width: 768px) {
