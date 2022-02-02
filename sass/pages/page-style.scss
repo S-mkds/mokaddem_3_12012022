@@ -62,6 +62,7 @@
   padding: 1rem;
   background-color: colors.$lightgrey;
   justify-content: space-evenly;
+  display: flex;
   @media (max-width: 1200px) {
     display: block;
   }
