@@ -23,6 +23,7 @@
     @include mixin.base-shadow2;
     &:hover {
       @include mixin.zoom;
+      background-color: lighten($color: purple, $amount: 70%);
     }
     & i.fas {
       margin-right: 1rem;

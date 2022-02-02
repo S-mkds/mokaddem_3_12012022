@@ -163,6 +163,7 @@ header {
 }
 .function-filter li:hover {
   transform: scale(1.02);
+  background-color: #ffe6ff;
 }
 .function-filter li i.fas {
   margin-right: 1rem;
