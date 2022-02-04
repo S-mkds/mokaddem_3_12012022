@@ -122,6 +122,9 @@ header {
   padding: 2rem;
   font-size: 1.5rem;
 }
+.button-city p {
+  padding: 0 15px;
+}
 .button-city button {
   color: white;
   font-weight: 300;
@@ -134,7 +137,7 @@ header {
   margin-bottom: 2rem;
   box-shadow: 4px 4px 6px #aaa;
 }
-.button-city button:hover {
+.button-city button:hover, .button-city button:active {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
@@ -142,7 +145,6 @@ header {
 
 .function-filter {
   margin-bottom: 2rem;
-  cursor: pointer;
 }
 .function-filter ol {
   display: flex;
@@ -154,19 +156,24 @@ header {
 }
 .function-filter li {
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
   flex-grow: 1;
   border-radius: 1rem;
-  margin-right: 5rem;
   text-align: center;
+  margin-right: 10px;
+  display: flex;
   box-shadow: 4px 4px 6px #aaa;
 }
-.function-filter li:hover {
+.function-filter li:hover, .function-filter li:active {
   transform: scale(1.02);
   background-color: #ffe6ff;
+  cursor: pointer;
 }
 .function-filter li i.fas {
-  margin-right: 1rem;
+  margin-right: 10px;
   color: lightgrey;
   font-size: 1.5rem;
 }
@@ -188,6 +195,11 @@ header {
   align-items: center;
 }
 
+@media (min-width: 1000px) {
+  .function-filter li {
+    margin-right: 1rem;
+  }
+}
 .chart {
   background-color: #f6f6f6;
   border-radius: 0.3rem;
@@ -252,7 +264,7 @@ header {
   background-color: white;
   border-radius: 1rem;
 }
-.chart .card:hover {
+.chart .card:hover, .chart .card:active {
   transform: scale(1.02);
 }
 .chart .card__image {
@@ -288,7 +300,8 @@ header {
   opacity: 0;
   transition: all 600ms;
 }
-.chart .card .fas:hover {
+.chart .card .fas:hover,
+.chart .card .fas:active {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -296,7 +309,7 @@ header {
   transition: all 600ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-.chart .card:hover .fas {
+.chart .card:hover .fas, .chart .card:active .fas {
   opacity: 1;
   transform: scale(1.2);
   transition-delay: 250ms;
@@ -335,7 +348,7 @@ footer p {
   position: absolute;
   top: 20%;
 }
-.arrow:hover {
+.arrow:hover, .arrow:active {
   transform: scale(1.5);
 }
 
@@ -374,7 +387,7 @@ footer p {
   transition: all 200ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-.icon-div .icon-page .fas:hover {
+.icon-div .icon-page .fas:hover, .icon-div .icon-page .fas:active {
   opacity: 1;
   transform: scale(1.2);
   cursor: pointer;
@@ -409,7 +422,6 @@ footer p {
   border-radius: 1rem;
   margin-right: 1rem;
   box-shadow: 4px 4px 6px #aaa;
-  cursor: pointer;
   animation: appear 2s;
   animation-fill-mode: both;
 }
@@ -449,17 +461,17 @@ footer p {
   margin-right: -4rem;
   height: 60px;
   width: 4rem;
-  cursor: pointer;
   display: grid;
   align-items: center;
   flex-shrink: 0;
   transition: margin-right 200ms linear;
   text-align: center;
 }
-.food-menu:hover .food-menu__slide {
+.food-menu:hover .food-menu__slide, .food-menu:active .food-menu__slide {
   margin-right: 0;
+  cursor: pointer;
 }
-.food-menu:hover .food-menu__slide i {
+.food-menu:hover .food-menu__slide i, .food-menu:active .food-menu__slide i {
   animation: reverse-check 0.5s ease-in-out;
 }
 @keyframes reverse-check {
@@ -470,8 +482,9 @@ footer p {
     transform: rotate(0deg);
   }
 }
-.food-menu:hover .food-menu__description {
+.food-menu:hover .food-menu__description, .food-menu:active .food-menu__description {
   width: calc(100% - 7rem);
+  cursor: pointer;
 }
 .food-menu .fa-check-circle {
   color: #fff;
@@ -492,7 +505,6 @@ footer p {
   color: #fff;
   font-weight: bold;
   box-shadow: 4px 4px 6px #aaa;
-  cursor: pointer;
   margin: 30px 0;
   padding: 20px;
   width: 35%;
@@ -500,9 +512,10 @@ footer p {
   flex-wrap: wrap;
   justify-content: center;
 }
-.button-command button:hover {
+.button-command button:hover, .button-command button:active {
   transform: scale(1.04);
   transition-property: transform;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .button-command button {

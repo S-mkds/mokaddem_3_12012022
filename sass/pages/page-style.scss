@@ -7,7 +7,8 @@
   left: 2rem;
   position: absolute;
   top: 20%;
-  &:hover {
+  &:hover,
+  &:active {
     transform: scale(1.5);
   }
 }
@@ -48,7 +49,8 @@
       transition: all 200ms;
       @include mixin.gradient(1);
     }
-    & .fas:hover {
+    & .fas:hover,
+    & .fas:active {
       opacity: 1;
       transform: scale(1.2);
       cursor: pointer;
@@ -83,7 +85,6 @@
   border-radius: 1rem;
   margin-right: 1rem;
   @include mixin.base-shadow2;
-  cursor: pointer;
   animation: appear 2s;
   animation-fill-mode: both;
   @for $i from 1 through 3 {
@@ -118,15 +119,16 @@
     margin-right: -4rem;
     height: 60px;
     width: 4rem;
-    cursor: pointer;
     display: grid;
     align-items: center;
     flex-shrink: 0;
     transition: margin-right 200ms linear;
     text-align: center;
   }
-  &:hover .food-menu__slide {
+  &:hover .food-menu__slide,
+  &:active .food-menu__slide {
     margin-right: 0;
+    cursor: pointer;
     i {
       @include animations.reverse-check;
       animation: reverse-check 0.5s ease-in-out {
@@ -134,8 +136,10 @@
       }
     }
   }
-  &:hover .food-menu__description {
+  &:hover .food-menu__description,
+  &:active .food-menu__description {
     width: calc(100% - 7rem);
+    cursor: pointer;
   }
   & .fa-check-circle {
     color: #fff;
@@ -158,16 +162,17 @@
   color: #fff;
   font-weight: bold;
   @include mixin.base-shadow2;
-  cursor: pointer;
   margin: 30px 0;
   padding: 20px;
   width: 35%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  &:hover {
+  &:hover,
+  &:active {
     transform: scale(1.04);
     transition-property: transform;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     width: 50%;

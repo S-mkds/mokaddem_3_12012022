@@ -57,7 +57,8 @@
   .card {
     background-color: white;
     border-radius: 1rem;
-    &:hover {
+    &:hover,
+    &:active {
       transform: scale(1.02);
     }
 
@@ -94,7 +95,8 @@
       opacity: 0;
       transition: all 600ms;
     }
-    .fas:hover {
+    .fas:hover,
+    .fas:active {
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
@@ -102,7 +104,8 @@
       transition: all 600ms;
       @include mixin.gradient(1);
     }
-    &:hover .fas {
+    &:hover .fas,
+    &:active .fas {
       opacity: 1;
       transform: scale(1.2);
       transition-delay: 250ms;
