@@ -307,12 +307,12 @@ header {
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 600ms;
+  transition-delay: 250ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 .chart .card:hover .fas, .chart .card:active .fas {
   opacity: 1;
   transform: scale(1.2);
-  transition-delay: 250ms;
 }
 .chart .card__description {
   position: relative;
@@ -343,6 +343,11 @@ footer p {
   cursor: pointer;
 }
 
+@media (min-width: 2160px) {
+  footer {
+    height: 690px;
+  }
+}
 .arrow {
   left: 2rem;
   position: absolute;
