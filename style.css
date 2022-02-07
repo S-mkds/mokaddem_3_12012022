@@ -307,12 +307,12 @@ header {
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 600ms;
+  transition-delay: 250ms;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 .chart .card:hover .fas, .chart .card:active .fas {
   opacity: 1;
   transform: scale(1.2);
-  transition-delay: 250ms;
 }
 .chart .card__description {
   position: relative;
@@ -343,13 +343,19 @@ footer p {
   cursor: pointer;
 }
 
+@media (min-width: 2160px) {
+  footer {
+    height: 690px;
+  }
+}
 .arrow {
   left: 2rem;
   position: absolute;
-  top: 20%;
+  top: 38%;
+  font-size: 1.5rem;
 }
 .arrow:hover, .arrow:active {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .img-page img {
@@ -490,6 +496,11 @@ footer p {
   color: #fff;
 }
 
+@media (min-width: 1200px) {
+  .food__category {
+    width: 33%;
+  }
+}
 .button-command {
   display: flex;
   flex-wrap: wrap;

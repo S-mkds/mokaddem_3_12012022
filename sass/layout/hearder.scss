@@ -3,7 +3,7 @@
 
 // loader
 
-.loader-start { 
+.loader-start {
   position: fixed;
   background: linear-gradient(#b81fff, #ff53ffc0);
   height: 100vh;
@@ -14,68 +14,67 @@
   animation-delay: 2s;
   transform-origin: center;
 }
-@keyframes disappear { 
-  from { 
+@keyframes disappear {
+  from {
     transform: scale(1);
   }
-  to { 
+  to {
     transform: scale(0);
   }
 }
-  .lds-dual-ring {
-    width: 120px;
-    border-radius: 50%;
-    border: 10px solid purple;
-    border-color: white transparent white transparent;
-    animation: lds-dual-ring 0.5s ease infinite;
-    position: absolute;
-    top: 35%;
-    right: 48%;
-    @media (max-width: 768px){ 
-      top: 40%;
-      right: 38%;
-    }
-    & i { 
-      font-size: xx-large;
-      padding: 35%;
-      color: white;
-    }
+.lds-dual-ring {
+  width: 120px;
+  border-radius: 50%;
+  border: 10px solid purple;
+  border-color: white transparent white transparent;
+  animation: lds-dual-ring 0.5s ease infinite;
+  position: absolute;
+  top: 35%;
+  right: 48%;
+  @media (max-width: 768px) {
+    top: 40%;
+    right: 38%;
   }
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  & i {
+    font-size: xx-large;
+    padding: 35%;
+    color: white;
   }
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 //header
 
-header { 
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    @include mixin.base-shadow2;
-    padding: 0.3rem;
-    position: relative;
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  @include mixin.base-shadow2;
+  padding: 0.3rem;
+  position: relative;
 }
 
-.city { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background-color: lightgrey;
-    text-align: center;
-    padding: 2rem;
-    & i { 
-        font-size: 1.2rem;
-        padding-left: 3rem;
-    }
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: lightgrey;
+  text-align: center;
+  padding: 2rem;
+  & i {
+    font-size: 1.2rem;
+    padding-left: 3rem;
+  }
 }
-.city input { 
-    background-color: lightgrey !important;
-    border:none;
-    font-size: 1rem;
- 
+.city input {
+  background-color: lightgrey !important;
+  border: none;
+  font-size: 1rem;
 }

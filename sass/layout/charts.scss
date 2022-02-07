@@ -102,13 +102,13 @@
       -webkit-background-clip: text;
       opacity: 0;
       transition: all 600ms;
+      transition-delay: 250ms;
       @include mixin.gradient(1);
     }
     &:hover .fas,
     &:active .fas {
       opacity: 1;
       transform: scale(1.2);
-      transition-delay: 250ms;
     }
   }
   .card__description {

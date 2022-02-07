@@ -6,10 +6,11 @@
 .arrow {
   left: 2rem;
   position: absolute;
-  top: 20%;
+  top: 38%;
+  font-size: 1.5rem;
   &:hover,
   &:active {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }
 
@@ -107,6 +108,7 @@
     width: calc(100% - 3rem);
     transition: width 200ms linear;
   }
+  
   .food-menu__price {
     font-weight: 900;
     align-self: self-end;
@@ -143,6 +145,11 @@
   }
   & .fa-check-circle {
     color: #fff;
+  }
+}
+@media (min-width: 1200px) { 
+  .food__category { 
+    width: 33%;
   }
 }
 
